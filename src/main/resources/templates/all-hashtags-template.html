@@ -27,8 +27,7 @@
         <section class="main-content__hashtags hashtags">
             <h2 class="topics__title main-content__title">Hashtags</h2>
             <nav class="main-content__nav __nav">
-                <a th:each="hashtags: ${hashtags}" th:text="${hashtags.name}" th:href="'/hashtags/'+${hashtags.id}" href="#"
-                   class="hashtags__nav-link"></a>
+                <a th:each="hashtags: ${hashtags}" th:text="${hashtags.name}" th:href="'/hashtag/'+${hashtags.id}"></a>
             </nav>
         </section>
     </main>

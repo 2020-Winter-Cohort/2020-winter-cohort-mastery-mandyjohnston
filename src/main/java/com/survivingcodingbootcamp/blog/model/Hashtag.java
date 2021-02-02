@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 public class Hashtag {
@@ -16,12 +17,17 @@ public class Hashtag {
     @ManyToMany(mappedBy = "hashtags")
     private Collection<Post> posts;
 
-    public Hashtag(String name, Collection<Post> posts) {
-        this.name = name;
-        this.posts = posts;
+    public Hashtag() {
+
     }
 
-    public Hashtag() {
+    public Hashtag(String name, Post...posts) {
+        this.name = name;
+        this.posts = List.of(posts);
+    }
+
+    public Hashtag(String name) {
+        this.name = name;
 
     }
 

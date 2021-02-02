@@ -1,8 +1,11 @@
 package com.survivingcodingbootcamp.blog.storage;
 
+import com.survivingcodingbootcamp.blog.model.Hashtag;
 import com.survivingcodingbootcamp.blog.model.Post;
 import com.survivingcodingbootcamp.blog.storage.repository.PostRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class PostStorageJpaImpl implements PostStorage {
@@ -26,4 +29,6 @@ public class PostStorageJpaImpl implements PostStorage {
     public void save(Post postToAdd) {
         postRepo.save(postToAdd);
     }
+
+
 }
